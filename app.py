@@ -72,7 +72,7 @@ if total(player_hand) == 21:
 elif total(dealer_hand) == 21:
     print("Blackjack! The dealer wins!")
 elif total(player_hand) > 21:
-    print(f"You have a total of {total(player_hand)}, adding up to {total(player_hand)}")
+    print(f"You have a total of {total(player_hand)}.")
     print("You have busted! The dealer wins!")
 elif total(dealer_hand) > 21:
     print(f"Your hand is {player_hand}, adding up to {total(player_hand)}")
