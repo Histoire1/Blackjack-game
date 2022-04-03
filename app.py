@@ -58,6 +58,8 @@ def total(hand):
 
 while total(player_hand) > 21 and ace_card in player_hand:
     ace_card = 1
+while total(dealer_hand) > 21 and ace_card in dealer_hand:
+    ace_card = 1
 
 # revealing hands and determine whether to hit or stand
 
