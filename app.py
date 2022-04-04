@@ -122,11 +122,7 @@ while player_in or dealer_in:
         player_in = False
         break
 while len(dealer_hand) >= 2 and game_start is True:
-    if total(dealer_hand) < 16:
-        deal_card(dealer_hand)
-    if total(dealer_hand) < 16:
-        deal_card(dealer_hand)
-    if total(dealer_hand) < 16:
+    while total(dealer_hand) < 16:
         deal_card(dealer_hand)
     if total(player_hand) == 21 and len(player_hand) > 2:
         print(f"The dealer's hand is {dealer_hand}, adding up to {total(dealer_hand)}. You win!")
