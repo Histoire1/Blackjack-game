@@ -20,7 +20,7 @@ else:
 player_hand = []
 dealer_hand = []
 deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']*4
-
+ace_card = ['A']
 
 # dealing the cards
 
@@ -40,9 +40,9 @@ for _ in range(2):
 
 
 def total(hand):
+    global ace_card
     total = 0
     face_card = ['J', 'Q', 'K']
-    ace_card = ['A']
     for card in hand:
         if card in range(1, 11):
             total += card
@@ -55,11 +55,6 @@ def total(hand):
                 total += 11
     return total
 
-
-while total(player_hand) > 21 and ace_card in player_hand:
-    ace_card = 1
-while total(dealer_hand) > 21 and ace_card in dealer_hand:
-    ace_card = 1
 
 # revealing hands and determine whether to hit or stand
 
